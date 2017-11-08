@@ -9,13 +9,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class MainActivity extends AppCompatActivity {
     GridLayout gridLayout;
@@ -98,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         rightAnswers = 0;
         currentProblem = 0;
         updateScore();
+        answerCheckText.setVisibility(View.INVISIBLE);
         restartButton.setVisibility(View.GONE);
         estimatedTime.setText("35s");
         new CountDownTimer(35 * 1000,1000) {
