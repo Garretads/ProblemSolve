@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.simplemapapp.sergej.problemsolve.MainActivity">
+
+    <TextView
+        android:id="@+id/estimatedTime"
+        android:layout_width="62dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/template_estimated"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="30sp"
+        android:typeface="normal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/problemText"
+        android:layout_width="153dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/template_problem"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="24sp"
+        android:typeface="normal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/problemCount"
+        app:layout_constraintStart_toEndOf="@+id/estimatedTime"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/problemCount"
+        android:layout_width="62dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/template_problemCount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="21sp"
+        android:typeface="normal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/answer1"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:background="#085F63"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:onClick="answerPressed"
+            android:text="@string/template_answer"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#F7A09C"
+            android:textSize="50sp"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/answer2"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:background="#49BEB7"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:onClick="answerPressed"
+            android:text="@string/template_answer"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#B64148"
+            android:textSize="50sp"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/answer3"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:background="#FCCF4D"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:onClick="answerPressed"
+            android:text="@string/template_answer"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#0330B2"
+            android:textSize="50sp"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/answer4"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:background="#EF255F"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:onClick="answerPressed"
+            android:text="@string/template_answer"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#10DAA0"
+            android:textSize="50sp"
+            android:typeface="normal" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/answerCheckText"
+        android:layout_width="253dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@string/answer_right"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        android:typeface="normal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="restartGame"
+        android:text="@string/button_text"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/getStarted"
+        android:layout_width="237dp"
+        android:layout_height="163dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="@string/get_started_string"
+        android:textColor="#0044CC"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/answerCheckText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="getStarted"/>
+
+</android.support.constraint.ConstraintLayout>

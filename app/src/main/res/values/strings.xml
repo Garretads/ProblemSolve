@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ProblemSolve</string>
+    <string name="template_answer">25</string>
+    <string name="template_estimated">35s</string>
+    <string name="template_problem">12 + 6</string>
+    <string name="template_problemCount">10/10</string>
+    <string name="answer_right">Right!</string>
+    <string name="answer_wrong">Wrong!</string>
+    <string name="button_text">Play again</string>
+    <string name="get_started_string">GO!</string>
+</resources>
